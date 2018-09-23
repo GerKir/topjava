@@ -9,7 +9,16 @@ public class UserMealWithExceed {
 
     private final int calories;
 
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
     private final boolean exceed;
+
+    @Override
+    public String toString() {
+        return String.format("data: %s, description: %s, calories: %s, exceed: %b", dateTime.toLocalDate(), description, calories, exceed);
+    }
 
     public UserMealWithExceed(LocalDateTime dateTime, String description, int calories, boolean exceed) {
         this.dateTime = dateTime;
