@@ -3,6 +3,8 @@ package ru.javawebinar.topjava.model;
 import java.time.LocalDateTime;
 
 public class MealWithExceed {
+    private final Integer id;
+
     private final LocalDateTime dateTime;
 
     private final String description;
@@ -37,5 +39,17 @@ public class MealWithExceed {
         this.description = description;
         this.calories = calories;
         this.exceed = exceed;
+    }
+
+    @Override
+    public String toString() {
+        return "MealWithExceed{" +
+                "dateTime=" + dateTime +
+                "id=" + id +
+                ", dateTime=" + dateTime +
+                ", description='" + description + '\'' +
+                ", calories=" + calories +
+                ", exceed=" + exceed +
+                '}';
     }
 }
